@@ -253,7 +253,8 @@ module Airborne
         array: [Array],
         array_of_arrays: [Array],
         date: [DateTime],
-        null: [NilClass]
+        null: [NilClass],
+        bson_objectid: [BSON::ObjectId]
       }
 
       mapper = base_mapper.clone
