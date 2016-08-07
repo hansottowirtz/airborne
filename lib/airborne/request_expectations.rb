@@ -253,9 +253,10 @@ module Airborne
         array: [Array],
         array_of_arrays: [Array],
         date: [DateTime],
-        null: [NilClass],
-        bson_objectid: [BSON::ObjectId]
+        null: [NilClass]
       }
+      
+      base_mapper[:bson_objectid] = BSON::ObjectId if defined?(BSON::ObjectId)
 
       mapper = base_mapper.clone
       base_mapper.each do |key, value|
